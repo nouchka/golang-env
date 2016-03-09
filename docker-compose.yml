@@ -1,0 +1,9 @@
+build:
+  image: golang:1.6.0-wheezy
+  entrypoint: ./build.sh
+  volumes:
+    - ./:/go/
+  environment:
+    - DIRECTORY=docker-machine
+    - GITHUB=docker/machine
+    - BIN_FILE=bin/docker-machine
